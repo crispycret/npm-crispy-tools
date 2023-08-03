@@ -1,0 +1,28 @@
+{
+  "name": "crispy-tools",
+  "version": "1.0.0",
+  "description": "Common utilities and hooks that I use in most of my node projects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crispycret/npm-crispy-tools.git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "toolset",
+    "hooks",
+    "utilites",
+    "common-tools",
+    "crispycret"
+  ],
+  "author": "Brandon Nadeau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/crispycret/npm-crispy-tools/issues"
+  },
+  "homepage": "https://github.com/crispycret/npm-crispy-tools#readme"
+}
