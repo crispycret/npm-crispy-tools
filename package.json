@@ -4,7 +4,8 @@
   "description": "Common utilities and hooks that I use in most of my node projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -24,5 +25,9 @@
   "bugs": {
     "url": "https://github.com/crispycret/npm-crispy-tools/issues"
   },
-  "homepage": "https://github.com/crispycret/npm-crispy-tools#readme"
+  "homepage": "https://github.com/crispycret/npm-crispy-tools#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
 }
