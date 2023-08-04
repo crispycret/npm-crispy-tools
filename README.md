@@ -43,16 +43,16 @@ To use this library in your React projects, follow these steps:
 1. Install the library using npm or yarn:
 
 ```bash
-npm install my-custom-toolset
+npm install crispy-tools
 # or
-yarn add my-custom-toolset
+yarn add crispy-tools
 ```
 
 2. Import the desired utility functions or hooks from the library into your project files:
 
 ```javascript
 
-import { useTitle, useToggle, usePosition, usePage, useMobile, useCountdownTimer } from 'my-custom-toolset';
+import { useTitle, useToggle, usePosition, usePage, useMobile, useCountdownTimer } from 'crispy-tools';
 ```
 
 3. Use the imported functions and hooks in your components as needed:
@@ -60,29 +60,34 @@ import { useTitle, useToggle, usePosition, usePage, useMobile, useCountdownTimer
 ```javascript
 
 import React from 'react';
-import { useToggle, useCountdownTimer } from 'my-custom-toolset';
+import { useToggle, useCountdownTimer } from 'crispy-tools';
 
 const ExampleComponent = () => {
-  const [windowOpen, toggleWindow] = useToggle();
-  const { remainingTime, startTimer, cancelTimer, formatTime } = useCountdownTimer();
 
-  const onClick = () => {
-    toggleWindow();
-    startTimer(10, () => console.log('Timer is done!'));
-  };
+    useTitle('Page Title for Component')
 
-  const onCancelClick = () => {
-    cancelTimer();
-  };
+    const { mobile, isPortrait } = useMobile();
+    const [windowOpen, toggleWindow] = useToggle();
+    const { remainingTime, startTimer, cancelTimer, formatTime } = useCountdownTimer();
 
-  return (
-    <div>
-      <button onClick={onClick}>Toggle Window</button>
-      <button onClick={onCancelClick}>Cancel Timer</button>
-      <p>Remaining Time: {formatTime(remainingTime)}</p>
-      {windowOpen && <div>Window Content</div>}
-    </div>
-  );
+    const onClick = () => {
+        toggleWindow();
+        startTimer(10, () => console.log('Timer is done!'));
+    };
+
+    const onCancelClick = () => {
+        cancelTimer();
+    };
+
+    return (
+        <div>
+            <button onClick={onClick}>Toggle Window</button>
+            <button onClick={onCancelClick}>Cancel Timer</button>
+            <p>Remaining Time: {formatTime(remainingTime)}</p>
+            {windowOpen && <div>Window Content</div>}
+            {mobile && <div>Mobile Only Content</div>}
+        </div>
+    );
 };
 
 export default ExampleComponent;
