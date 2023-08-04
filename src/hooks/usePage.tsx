@@ -32,9 +32,9 @@ const usePage = () => {
      * on the current browser path to make some action.
     */
 
-    const location = useLocation();
-
-    const [path, setPath] = useState(location.pathname.split('/').filter(_ => { return _ !== ''}))
+   
+   const location = useLocation();
+    const [path, setPath] = useState(location.pathname.split('/').filter((_:any) => { return _ !== ''}))
 
     const [page, setPage] = useState(-1); // index for `page_routes`
     const pageRoutes = [
@@ -66,7 +66,7 @@ const usePage = () => {
 
     useEffect( () => {
         lookupPage();
-        setPath(location.pathname.split('/').filter(_ => { return _ !== ''}))
+        setPath(location.pathname.split('/').filter((_: any) => { return _ !== ''}))
     }, [])
 
     return {

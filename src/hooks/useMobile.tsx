@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { debounce } from "./utils/eventUtils";
+import { debounce } from "../utils/eventUtils";
 
 
 /**

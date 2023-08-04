@@ -9,7 +9,9 @@
     "strict": true,
     "allowJs": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src"
+    "baseUrl": "./src",
+    "moduleResolution": "node"
+    
   },
   "include": ["src"]
 }
