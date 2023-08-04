@@ -1,6 +1,6 @@
 {
   "name": "crispy-tools",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Common utilities and hooks that I use in most of my node projects.",
   "main": "index.js",
   "scripts": {
