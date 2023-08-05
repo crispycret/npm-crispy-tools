@@ -9,8 +9,13 @@
     "strict": true,
     "allowJs": true,
     "jsx": "react-jsx",
-    "baseUrl": "./src",
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    // "baseUrl": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "crispy-tools/*": ["dist/*"]
+    }
+
     
   },
   "include": ["src"]
