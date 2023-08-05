@@ -3,6 +3,10 @@
   "version": "1.0.7",
   "description": "Common utilities and hooks that I use in most of my node projects.",
   "main": "index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc --declaration"
@@ -34,8 +38,5 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-router-dom": "^6.14.2"
-  },
-  "files": [
-    "dist"
-  ]
+  }
 }
